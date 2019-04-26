@@ -18,7 +18,7 @@ To build an app that could predict the probability of a user passing the H1B app
 Enable users to use the app to predict the probability of passing the H1B application and understand what are the variables that are driving the success of an application. 
 
 **Success criteria**:  
-	1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome out of 5 possible outcomes. A misclassification rate of 10% or lower denotes success
+	1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome out of 5 possible outcomes. A misclassification rate of 10% or lower denotes success  
 	2. Business metric: A Click through rate of 70% to see the detailed report from the user end and a MAU of 1,000 would denote success
  ## Project Planning
  
