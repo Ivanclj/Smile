@@ -18,7 +18,7 @@ This app would allows employees at Tech companies to find out whether they need 
 Help users to find out whether they need treatment for mental health problems by taking their input on a series of survey question and predict outcome for the user. It would also provides a report on what are the factors impact the user's result
 
 **Success criteria**:  
-	1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome out of 5 possible outcomes. A misclassification rate of 10% or lower denotes success  
+	1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome. A misclassification rate of 10% or lower denotes success  
 	2. Business metric: A Click through rate of 70% to see the detailed report from the user end and a MAU of 1,000 would denote success
  ## Project Planning
  
@@ -73,5 +73,5 @@ Help users to find out whether they need treatment for mental health problems by
 ## IceBox
 1. Theme.epic3.story3: App Improvement (8 points)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDAyNTI1Nl19
+eyJoaXN0b3J5IjpbMjAzMDE3NTQwNCwtOTcwMDI1MjU2XX0=
 -->
