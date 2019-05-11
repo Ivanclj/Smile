@@ -7,7 +7,12 @@ Created on 5/10/19
 
 import pandas as pd
 
-url = 'https://raw.githubusercontent.com/pydata/pydata-book/master/ch09/stock_px.csv'
-df = pd.read_csv(url,index_col=0,parse_dates=[0])
+def download_data(read_path,save_path):
+    df = pd.read_csv(url,index_col=0)
+    df.to_csv(save_path)
 
-print df.head(5)
+
+if __name__ == "__main__":
+    url = 'https://raw.githubusercontent.com/Ivanclj/proj_data/master/survey.csv'
+    download_data(url,"../data/survey.csv")
+
