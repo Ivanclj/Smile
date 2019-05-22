@@ -1,14 +1,14 @@
 """
 Created on 5/10/19
 
-@author: ivanchen
+@author: ivan chen
 
 """
 
 import pandas as pd
 
 def download_data(read_path,save_path):
-    df = pd.read_csv(url,index_col=0)
+    df = pd.read_csv(read_path,index_col=0)
     df.to_csv(save_path)
 
 
