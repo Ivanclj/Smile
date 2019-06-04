@@ -1,111 +1,246 @@
-# Smile
+# Example project repository
 
 <!-- toc -->
 
 - [Project Charter](#project-charter)
-- [Project Planning](#project-planning)
--  [Backlog](#backlog)
-- [IceBox](#IceBox)
+- [Repo structure](#repo-structure)
+- [Documentation](#documentation)
+- [Running the application](#running-the-application)
+  * [1. Set up environment](#1-set-up-environment)
+    + [With `virtualenv`](#with-virtualenv)
+    + [With `conda`](#with-conda)
+    + [With `make`](#with-make)
+  * [2. Configure Flask app](#2-configure-flask-app)
+  * [3. Initialize the database](#3-initialize-the-database)
+  * [4. Run the application](#4-run-the-application)
+  * [5. Interact with the application](#5-interact-with-the-application)
+- [Creating the trained model object with Make](#creating-the-trained-model-object-with-make)
+- [Testing](#testing)
 
 <!-- tocstop -->
 
 ## Project Charter 
 
-**Vision**:  
-This app would allows employees at Tech companies to find out whether they need to seek treatment for potential mental health issues. It also helps Tech companies to track the mental health of their employees and provide them with necessary assistance if needed
+**Vision**: To enable animals everywhere to enjoy music just for them. 
 
-**Mission**:  
-Help users to find out whether they need treatment for mental health problems by taking their input on a series of survey question and predict outcome for the user. It would also provides a report on what are the factors impact the user's result
+**Mission**: Enable users to add songs that they like and produce new song recommendations based on their entries.
 
-**Success criteria**:  
-	1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome. A misclassification rate of 10% or lower denotes success  
-	2. Business metric: A Click through rate of 70% to see the detailed report from the user end and a MAU of 1,000 would denote success
- ## Project Planning
+**Success criteria**: Users play 80% of recommended songs more than once. 
+
+
+_Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
+
+## Repo structure 
+
+```
+├── README.md                         <- You are here
+│
+├── app
+│   ├── static/                       <- CSS, JS files that remain static 
+│   ├── templates/                    <- HTML (or other code) that is templated and changes based on a set of inputs
+│   ├── models.py                     <- Creates the data model for the database connected to the Flask app 
+│   ├── __init__.py                   <- Initializes the Flask app and database connection
+│
+├── config                            <- Directory for yaml configuration files for model training, scoring, etc
+│   ├── logging/                      <- Configuration files for python loggers
+│
+├── data                              <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git. 
+│   ├── archive/                      <- Place to put archive data is no longer usabled. Not synced with git. 
+│   ├── external/                     <- External data sources, will be synced with git
+│   ├── sample/                       <- Sample data used for code development and testing, will be synced with git
+│
+├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
+│
+├── figures                           <- Generated graphics and figures to be used in reporting.
+│
+├── models                            <- Trained model objects (TMOs), model predictions, and/or model summaries
+│   ├── archive                       <- No longer current models. This directory is included in the .gitignore and is not tracked by git
+│
+├── notebooks
+│   ├── develop                       <- Current notebooks being used in development.
+│   ├── deliver                       <- Notebooks shared with others. 
+│   ├── archive                       <- Develop notebooks no longer being used.
+│   ├── template.ipynb                <- Template notebook for analysis with useful imports and helper functions. 
+│
+├── src                               <- Source data for the project 
+│   ├── archive/                      <- No longer current scripts.
+│   ├── helpers/                      <- Helper scripts used in main src files 
+│   ├── sql/                          <- SQL source code
+│   ├── add_songs.py                  <- Script for creating a (temporary) MySQL database and adding songs to it 
+│   ├── ingest_data.py                <- Script for ingesting data from different sources 
+│   ├── generate_features.py          <- Script for cleaning and transforming data and generating features used for use in training and scoring.
+│   ├── train_model.py                <- Script for training machine learning model(s)
+│   ├── score_model.py                <- Script for scoring new predictions using a trained model.
+│   ├── postprocess.py                <- Script for postprocessing predictions and model results
+│   ├── evaluate_model.py             <- Script for evaluating model performance 
+│
+├── test                              <- Files necessary for running model tests (see documentation below) 
+
+├── run.py                            <- Simplifies the execution of one or more of the src scripts 
+├── app.py                            <- Flask wrapper for running the model 
+├── config.py                         <- Configuration file for Flask app
+├── requirements.txt                  <- Python package dependencies 
+```
+This project structure was partially influenced by the [Cookiecutter Data Science project](https://drivendata.github.io/cookiecutter-data-science/).
+
+## Documentation
  
- - ***Theme***: The theme of this project is to develop a web app that enables users to find out whether they need to receive treatment for potential mental issues. Besides, the app would help them to learn what are important factors affecting the result
- - ***Epics***:
-	 - Data Preparation and Exploration:   
-	 At this stage, Data preparation and exploration would be done.
-		 - story 1: Data Preparation 
-			 - Download mental survey datasets from Kaggle
-			 - Clean datasets by removing/imputing NA values, treating outliers and influential points and removing duplicate records
-			 - Treat potential unbalanced outcome class problem
-		 - story 2: Data Exploration 
-			 - Explore data by calculating descriptive statistics (mean,min,max etc.) and plotting them for important covariates  
-			 - Check skewness of covariates and fix them if exist
-			 - Engineer features such as breaking address into city and states to create more aggregated and meaningful features
-			 - Perform feature selection for model building later
-			 
-	 - Model Construction:  
-	 At this stage, The full model would be constructed and generate desired output to pass all success metrics.
-		 - story 1: Model Initialization 
-			 - Random split datasets into 80% training and 20% testing
-			 - Try various classification model such as Logistic Regression, Random Forest, XGBoost, Neural Nets and Support Vector Machine 
-			 - Model will be implemented using Scikit-Learn and Keras
-			 
-		 - story 2: Model Tunning
-			 - Perform Grid/Random Search or utilize Scikit-optimizer library to find best hyperparameter for each model
-			 - Compare different models using 10-fold cross validation to select the best model with the lowest misclassification rate
-		
-	 - Model  Deployment:  
-	 At this stage, the full model would be deployed onto AWS and also the web app should be developed to wrap up the project.
-		 - story 1: Transition from Local to AWS 
-			 - Write unit tests and model reproducible tests and pass them locally 
-			 - Export dependencies for the model 
-			 - Move datasets and model related files onto AWS environment 
-			 - Run through pipeline to make sure no bugs occurred and write necessary logging files 
-		 - story 2: App Development 
-			 - Write necessary backend structure using flask and link the database where user information would be saved 
-			 - Design frontend user interface to have users input their company, salary, location, education and so on to collect information necessary to make the prediction
-			 - Design a detailed information page where user could learn what are important factors that affects results
-		 - story 3: App Improvement
-			 - Add more functionalities to allow user to see visualizations of their answers among all users
-			 - Add potential visual components if time permits
-		 
- ## Backlog
- 1. Theme.epic1.story1: Data Preparation (4 point) -Planned
- 2. Theme.epic1.story2: Data Exploration (4 point)  -Planned
- 3. Theme.epic2.story1: Model Initialization (4 point) -Planned
- 4. Theme.epic2.story2: Model Tuning (8 points)
- 5. Theme.epic3.story1: Transition from Local to AWS (4 points)
- 6. Theme.epic3.story2: App Development (8 points)
+* Open up `docs/build/html/index.html` to see Sphinx documentation docs. 
+* See `docs/README.md` for keeping docs up to date with additions to the repository.
 
-## IceBox
-1. Theme.epic3.story3: App Improvement (8 points)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDE3NTQwNF19
--->
+## Running the application 
+### 1. Set up environment 
 
-## Midpoint check
+The `requirements.txt` file contains the packages required to run the model code. An environment can be set up in two ways. See bottom of README for exploratory data analysis environment setup. 
 
-In this updates, I modified three files that implemented the features to download data from target site, upload data to S3 bucket and create table in RDS or local based on configuration.
+#### With `virtualenv`
 
-## Download data:  
-src/load_my_data.py : this script download data from my GitHub repo to ../data/data1.csv  
+```bash
+pip install virtualenv
 
-## Upload data:  
+virtualenv pennylane
 
-src/upload_data.py: upload data to target s3 bucket  
+source pennylane/bin/activate
 
-Requirement: boto 3 installed and have configured aws environment. (Check if have ~/.aws/credential file and if have access key and secret key in the file)  
+pip install -r requirements.txt
 
-Argument to be specified in bash:  
+```
+#### With `conda`
 
---input_path: local file path.  
+```bash
+conda create -n pennylane python=3.7
+conda activate pennylane
+pip install -r requirements.txt
 
---bucket_name: target bucket name  
+```
 
---output_path: output file path  
+#### With `make`
 
-## Create database in RDS/local:  
-src/sql/model_test.py: create table defined within script in either RDS or local based on argument  
+You can run the command:
+ ```bash
+ make venv
+ ``` 
+ to create the virtual environment. You will still need to activate the environment afterwards because it runs the command to create the environment from a separate terminal. 
 
-Requirement:  
-Have exported username, password, host and port for RDS as environment variables if want to use
-RDS version.  
+### 2. Configure Flask app 
 
-Argument to be specified in bash:  
+`app/config.py` holds the configurations for the Flask app. It includes the following configurations:
 
---RDS: True to create in rds, default to create at local.  
+```python
+DEBUG = True  # Keep True for debugging, change to False when moving to production 
+LOGGING_CONFIG = "config/logging/local.conf"  # Path to file that configures Python logger
+PORT = 3002  # What port to expose app on 
+SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/tracks.db'  # URI for database that contains tracks
 
-Note: there is a local logfile created by logger for information on the created table
+```
+
+* You will need to update the `PORT` configuration to your assigned port when deploying on the MSiA server (reach out to the instructors if you have not been assigned one)
+
+* The configuration currently says to save the database to a temporary location as it is just for testing. However, if you are not on your local machine, you may have issues with this location and should change it to a location within your home directory, where you have full permissions. To change it to saving in the data directory within this repository, run the Python code from this directory and change the `config.py` to say:
+
+```python
+SQLALCHEMY_DATABASE_URI = 'sqlite:///../data/tracksB.db'
+```
+
+The three `///` denote that it is a relative path to where the code is being run (which is from `src/add_songs.py`). 
+
+You can also define the absolute path with four `////`:
+
+```python
+SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/chloemawer/repos/MSIA423-example-project-repo-2019/data/tracks.db'
+```
+
+### 3. Initialize the database 
+
+To create the database in the location configured in `config.py` with one initial song, run: 
+
+`python run.py create --artist=<ARTIST> --title=<TITLE> --album=<ALBUM>`
+
+To add additional songs:
+
+`python run.py ingest --artist=<ARTIST> --title=<TITLE> --album=<ALBUM>`
+
+
+### 4. Run the application 
+ 
+ ```bash
+ python run.py app
+ ```
+
+
+You can also use `make` by running:
+
+```bash
+make app
+```
+
+### 5. Interact with the application 
+
+a. On your computer - go to [http://127.0.0.1:3000/](http://127.0.0.1:3000/) to interact with the current version of the app. 
+
+b. On the MSiA server:  when deploying the web app on the MSiA server you will need to run the following command **on your computer** (not on the server) before you can see the web app (you might be prompted for you NUIT password):
+
+```bash
+ssh -L $USER_PORT:127.0.0.1:$USER_PORT $NUIT_USER@msia423.analytics.northwestern.edu
+```
+
+* Replace the variable `$USER_PORT` with your assigned MSiA server port (reach out to the instructors if you have not been assigned one) and
+`$NUIT_USER` with your NUIT username. An example: `ssh -L 3000:127.0.0.1:9000 fai3458@msia423.analytics.northwestern.edu` (We use the same port number for both the remote and local ports for convenience)
+
+* Go to `http:127.0.0.1:$USER_PORT` to interact with the app. 
+
+
+## Creating the trained model object with Make
+
+From the command line, run: 
+
+```bash
+make trained-model
+```
+
+Running `make trained-model` is the same as running `make models/example.pkl` - the *PHONY* directive just allows for an easier command that creates a potentially long file name. 
+
+When running either `make trained-model` or `make models/example.pkl`, if the file does not exist, it will run the command defined under `models/example.pkl` to create it:
+
+```bash
+python run.py train_model --config=config/test_model_config.yml --input=data/features/example-features.csv --output=models/example-model.pkl
+```
+
+If `models/example.pkl` does exist but any of the files it depends on (`data/sample/music_data_combined.csv`, `src/generate_features.py`, and `config/test_model_config.yml`) have changed since `models/example-model.pkl` was created, it will run the command again to recreate the model file. 
+
+If `data/features/example-features.csv` doesn't exist when calling `make trained-model` or if it has changed since its dependencies were last changed, it will also create `data/features/example-features.csv` using the command defined for it.  
+
+Therefore, the first time you run `make trained-model`, it will create the features file and then the trained model object because neither exists. 
+
+If you change the configurations file, the code files, or the raw data file, it will recreate the trained model object in subsequent runs. 
+
+It is suggested that you version any models and their corresponding configuration files between changes of the configuration YAML or any other dependencies. 
+
+
+## Making predictions 
+
+From the command line, run: 
+
+```bash
+python pennylane.py --config=<path-to-config> --input=<path-to-data-to-score> --output=<path-to-save-data>
+```
+
+or to make predictions with example data inputs and test configuration file: 
+
+```bash
+make predictions
+```
+
+## Testing 
+
+Run `pytest` from the command line in the main project repository. 
+
+
+Tests exist in `test/test_helpers.py`
+
+You can also run the command: 
+
+```bash
+make test
+```
+

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Eventalk - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="static/css/flaticon.css">
+    <link rel="stylesheet" href="static/css/icomoon.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  </head>
+  <style >
+      #predict {
+    padding:5px 15px; 
+    background:#736AFF; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color: snow;
+  }
+
+  #predict:hover
+    {
+      color: black; /* SET COLOR IN BLACK */
+    }   
+
+  #home {
+    padding: 0 ; 
+    background: none; 
+    border: none;
+    color: black;
+    position:relative;
+    
+    left: -30px;
+    top: 7px;
+    font-size: 17px;
+    cursor:pointer;
+  }
+
+  #home:hover
+    {
+      color: silver; /* SET COLOR IN BLACK */
+    }   
+
+  #myChart {
+  height:100%;
+  width:100%;
+  min-height:150px;
+}
+.zc-ref {
+  display: none;
+}
+zing-grid[loading]{height:nullpx;}
+
+  </style>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="templates/index.html"><img src="static/images/mental_health.png" alt="" style="float:left;width:40px;height:60px;"><span STYLE="font-size: 28pt">Smile.</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+              <form action="{{ url_for('index') }}" method=post class="index">
+                <form action="/home" method="POST">
+                  <dl>
+                  <input type=submit value="Home" id = "home">
+                  </dl>
+                </form>
+                 
+              </form>
+<!--            <li class="nav-item"><a href="prediction.html" class="nav-link">Prediction</a></li>
+            <li class="nav-item"><a href="speakers.html" class="nav-link">Speakers</a></li>
+            <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+
+              <form action="{{ url_for('load_prediction') }}" method=post class="load_prediction">
+                  <form action="/predict" method="POST">
+                  <dl>
+                  <input type=submit value="Prediction" id = "predict">
+                  </dl>
+                  </form>
+              </form>
+    
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+    
+<!--     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+            <h1 class="mb-3 bread">About Us</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="ftco-section d-md-flex bg-light">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-md-7">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-counter img" id="section-counter">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-6 d-flex">
+            <div class="img d-flex align-self-stretch" style="background-image:url(static/images/about.jpg);"></div>
+          </div>
+          <div class="col-md-6 pl-md-5 py-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <span class="subheading">Prediction Results</span>
+                <h2 class="mb-4"><span>Prediction</span> Results</h2>
+                <h5>Your prediction result is: </h5>
+
+                <font face = "Comic sans MS" size ="5" color="black">{{results}}</font>
+
+                <!-- <h3> {{results}}</h3> -->
+              </div>
+            </div>
+            <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+                  <script>ZC.LICENSE=["b55b025e438fa8a98e32482b5f768ff5"];window.feed = function(callback) {
+                  var tick = {};
+                  tick.plot0 = Math.ceil((Math.random() * 100));
+                  callback(JSON.stringify(tick));
+                };
+
+                var myConfig = {
+                  type: "gauge",
+                  globals: {
+                    fontSize: 18
+                  },
+                  plotarea:{
+                    marginTop:80
+                  },
+                  plot:{
+                    size:'100%',
+                    valueBox: {
+                      placement: 'center',
+                      text:'%v', //default
+                      fontSize:28,
+                      rules:[
+                        {
+                          rule: '%v >= 80',
+                          text: '%v%<br>High Risk'
+                        },
+                        {
+                          rule: '%v < 80 && %v > 50',
+                          text: '%v%<br>Moderate Risk'
+                        },
+                        {
+                          rule: '%v < 50 && %v > 20',
+                          text: '%v%<br>Fair Risk'
+                        },
+                        {
+                          rule: '%v <  20',
+                          text: '%v%<br>Low Risk'
+                        }   
+                      ]
+                    }
+                  },
+                  tooltip:{
+                    borderRadius:5
+                  },
+                  scaleR:{
+                    aperture:180,
+                    minValue:0,
+                    maxValue:100,
+                    step:10,
+                    center:{
+                      visible:false
+                    },
+                    tick:{
+                      visible:false
+                    },
+                    item:{
+                      offsetR:0,
+                      rules:[
+                        {
+                          rule:'%i == 9',
+                          offsetX:15
+                        }
+                      ]
+                    },
+                    labels:['0','','20%','','','50%','','','80%','','100%'],
+                    ring:{
+                      size:50,
+                      rules:[
+                        {
+                          rule:'%v >= 80 && %v < 100',
+                          backgroundColor:'tomato'
+                        },
+                        {
+                          rule:'%v >= 50 && %v < 80',
+                          backgroundColor:'orange'
+                        },
+                        {
+                          rule:'%v >= 20 && %v < 50',
+                          backgroundColor:'gold'
+                        },
+                        {
+                          rule:'%v >= 0 && %v < 20',
+                          backgroundColor:'dodgerblue'
+                        }      
+                      ]
+                    }
+                  },
+                  // refresh:{  
+                  //     type:"feed",
+                  //     transport:"js",
+                  //     url:"feed()",
+                  //     interval:1500,
+                  //     resetTimeout:1000
+                  // },
+                  series : [
+                    {
+                      values : [{{prob}}], // starting value
+                      backgroundColor:'black',
+                      indicator:[10,10,10,10,0.75],
+                      animation:{  
+                        effect:2,
+                        method:1,
+                        sequence:4,
+                        speed: 900
+                     },
+                    }
+                  ]
+                };
+
+                zingchart.render({ 
+                  id : 'myChart', 
+                  data : myConfig, 
+                  height: 500, 
+                  width: '100%'
+                });
+
+                </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/jquery.waypoints.min.js"></script>
+  <script src="static/js/jquery.stellar.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/js/aos.js"></script>
+  <script src="static/js/jquery.animateNumber.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.js"></script>
+  <script src="static/js/jquery.timepicker.min.js"></script>
+  <script src="static/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="static/js/google-map.js"></script>
+  <script src="static/js/main.js"></script>
+    
+  </body>
+</html>

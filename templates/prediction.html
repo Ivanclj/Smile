@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/pred_style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="static/images/mental-dbl.jpg" alt="" vspace = "20" style="float:right;width:600px;height:800px;" >
+                </div>
+                <div class="signup-form">
+                    <form action="{{ url_for('index') }}" method=post class="index">
+                        <form action="/home" method="POST">
+                          <dl>
+                          <input type= "submit" value="Home" class = "submit" id = "reset" name="home">
+                          </dl>
+                        </form>
+                         
+                      </form>
+                    <form action="{{ url_for('add_entry') }}" method="POST" class="register-form" id="register-form">
+
+                        <h2>Employee Mental Health Prediction</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Age :</label>
+                                <input type=number name="age" id="age" min=0 max=110 required/>
+                            </div>
+                            <div class="form-group">
+
+                                <label for="family_history">Family History :</label>
+                                <div class="form-select">
+                                    <select name="family_history" id="family_history" required>
+                                        <option value=""></option>
+                                        <option value="1">Has Mental Illness</option>
+                                        <option value="0">Doesn't Have Mental Illness</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="no_emp">Number Of Employees In Current Company:</label>
+                                <div class="form-select">
+                                    <select name="no_employees" id="no_employees" required>
+                                        <option value=""></option>
+                                        <option value="1">1-5</option>
+                                        <option value="2">6-25</option>
+                                        <option value="3">26-100</option>
+                                        <option value="4">100-500</option>
+                                        <option value="5">500-1000</option>
+                                        <option value="6">More than 1000</option>
+                                        
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label" >Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" value = "1" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" value = "0" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="other" value="0">
+                                <label for="other">Other</label>
+                                <span class="check"></span>
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country">Country :</label>
+                                <div class="form-select">
+                                    <select name="country" id="country" required>
+                                        <option value=""></option>
+                                        <option value="us">United States</option>
+                                        <option value="uk">United Kindom</option>
+                                        <option value="china">China</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="germany">Germany</option>
+                                        <option value="france">France</option>
+                                        <option value="india">India</option>
+                                        <option value="italy">Italy</option>
+                                        <option value="netherland">Netherlands</option>
+                                        <option value="korea">Korea</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="south africa">South Africa </option>
+                                        <option value="israel">Israel</option>
+                                        <option value="brazil">Brazil</option>
+                                        <option value="argentina">Argentina</option>           
+                                        
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="states">States :</label>
+                                <input type=text name="states" id="states" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Benefits">Employer Provide Mental Health Benefits :</label>
+                                <div class="form-select">
+                                    <select name="Benefits" id="Benefits" required>
+                                        <option value=""></option>
+                                        <option value="2">Yes</option>
+                                        <option value="1">Not Sure</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="care_options"> Employer Provides Care Options for Mental Health :</label>
+                                <div class="form-select">
+                                        <select name="care_options" id="care_options" required>
+                                            <option value=""></option>
+                                            <option value="2">Yes</option>
+                                            <option value="1">Not Sure</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="leave">How Easy It Is To Take Medical Leave For Mental Health?:</label>
+                                <div class="form-select">
+                                        <select name="leave" id="leave" required>
+                                            <option value=""></option>
+                                            <option value="1">Very Easy</option>
+                                            <option value="2">Somewhat Easy</option>
+                                            <option value="3">Not Sure</option>
+                                            <option value="4">Somewhat Difficult</option>
+                                            <option value="5">Very Difficult</option>
+                                            
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="coworksers">Do You Trust Your Coworkers To Talk About Mental Health?:</label>
+                                <div class="form-select">
+                                        <select name="coworksers" id="coworksers" required>
+                                            <option value=""></option>
+                                            <option value="2">Yes</option>
+                                            <option value="1">Some of Them</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/js/prediction_main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
