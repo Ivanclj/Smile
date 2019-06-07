@@ -41,6 +41,7 @@ You can see the full charter at docs/ProjectCharter.md
 ├── README.md                         <- You are here
 
 ├── config                            <- Directory for yaml configuration files for feature generation, model training, evaluation, etc.
+├── config.py                         <- Configuration file for Flask app
 │   ├── logging/                      <- Configuration files for python loggers
 │
 ├── data                              <- Folder that contains data used or generated as well as databases for the app
@@ -75,9 +76,9 @@ Also contains all docs for different functions of the app
 
 ├── static/                           <- CSS, JS files that remain static
 ├── templates/                        <- HTML (or other code) that is templated and changes based on a set of inputs
-├── run.py                            <- Simplifies the execution of one or more of the src scripts 
+
 ├── app.py                            <- Flask wrapper for running the model 
-├── config.py                         <- Configuration file for Flask app
+
 ├── requirements.txt                  <- Python package dependencies 
 ```
 This project structure was partially influenced by the [Cookiecutter Data Science project](https://drivendata.github.io/cookiecutter-data-science/).
@@ -195,7 +196,8 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg2NTUxNjMyLDc2MzA0NzY1NywxNDIzOD
-g1MDE0LDE4Nzg2OTEzMTksLTE0MDA3OTY2OTAsLTE1MDMxNTk5
-NzgsLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbMTA1NDUwNjI0MiwzODY1NTE2MzIsNzYzMD
+Q3NjU3LDE0MjM4ODUwMTQsMTg3ODY5MTMxOSwtMTQwMDc5NjY5
+MCwtMTUwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ
+==
 -->
