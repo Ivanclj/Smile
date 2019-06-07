@@ -10,33 +10,43 @@ load_data:
   how: download_data
   download_data:
     read_path: https://raw.githubusercontent.com/Ivanclj/proj_data/master/survey.csv
-    save_path: ../data/survey.csv
+    save_path: data/survey.csv
 
 generate_features:
-  read_path: ../data/survey.csv
+  read_path: data/survey.csv
   choose_features:
     features_to_use: [Age,treatment,Gender,family_history,no_employees,benefits,care_options,leave,coworkers]
-  save_features: ../data/survey_cleaned.csv
+  save_features: data/survey_cleaned.csv
 
 train_model:
-  read_path: ../data/survey_cleaned.csv
+  read_path: data/survey_cleaned.csv
   method: random_forest
   target: treatment
+  data:
+    X: data/X.csv
+    y: data/y.csv
   split_data:
     train_size: 0.8
     test_size: 0.2
     random_state: 123
-  save_tmo: ../models/sample/random_forest.pkl
+  best_params:
+    max_depth: 6
+    max_features: 7
+    min_samples_split: 7
+    min_samples_leaf: 7
+    criterion: gini
+    n_estimator: 80
+  save_tmo: models/sample/random_forest.pkl
 
 evaluate_model:
-  path_to_tmo: ../models/sample/random_forest.pkl
+  path_to_tmo: models/sample/random_forest.pkl
   dataset:
-    X: ../data/X.csv
-    y: ../data/y.csv
+    X: data/X.csv
+    y: data/y.csv
   split_data:
     train_size: 0.8
     test_size: 0.2
-    random_state: 123
+    random_state: 41
   save_scores: test/model/test/example-music-test-scores.csv
 
 

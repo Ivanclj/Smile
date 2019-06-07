@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 import traceback
 from flask import render_template, request, redirect, url_for
 import logging.config
@@ -64,6 +64,18 @@ def load_prediction():
     except:
         traceback.print_exc()
         logger.warning("prediction page unable to load")
+        return render_template('error.html')
+
+
+@app.route('/contact',methods=['POST'])
+def get_contact():
+    try:
+        #tracks = db.session.query(User_Prediction).limit(app.config["MAX_ROWS_SHOW"]).all()
+        logger.debug("contact page accessed")
+        return render_template('contact.html')#, tracks=tracks)
+    except:
+        traceback.print_exc()
+        logger.warning("contact page unable to load")
         return render_template('error.html')
 
 
@@ -162,9 +174,12 @@ def add_entry():
             print(e.message)
         else:
             print(e)
-        logger.warning("Not able to display tracks, error page returned")
+        logger.warning("Not able to add entry, error page returned")
         return render_template('error.html')
 
+@app.route('/error', methods=['GET'])
+def get_error():
+    return  render_template('error.html')
 
 if __name__ == "__main__":
     app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])

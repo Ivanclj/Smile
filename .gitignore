@@ -1,5 +1,8 @@
+## File
 .DS_Store
-src/.DS_Store
+**/.DS_Store
+logfile
+
 
 ## directory
 .pytest_cache/

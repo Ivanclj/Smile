@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Eventalk - Free Bootstrap 4 Template by Colorlib</title>
+    <title>SMILE - Monitor Mental Health</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -50,8 +50,9 @@
     color: black;
     position:relative;
     
-    left: -30px;
-    font-size: 17px;
+    left: -40px;
+    top:5px;
+    font-size: 15px;
     cursor:pointer;
   }
 
@@ -60,6 +61,24 @@
       color: silver; /* SET COLOR IN BLACK */
     }   
 
+
+  #contact {
+    padding: 0 ; 
+    background: none; 
+    border: none;
+    color: black;
+    position:relative;
+    
+    left: -25px;
+    top: 5px;
+    font-size: 15px;
+    cursor:pointer;
+  }
+
+  #contact:hover
+    {
+      color: silver; /* SET COLOR IN BLACK */
+    }   
 
 
   </style>
@@ -78,6 +97,15 @@
                 <form action="/home" method="POST">
                   <dl>
                   <input type=submit value="Home" id = "home">
+                  </dl>
+                </form>
+                 
+              </form>
+
+              <form action="{{ url_for('get_contact') }}" method=post class="index">
+                <form action="/contact" method="POST">
+                  <dl>
+                  <input type=submit value="Contact" id = "contact">
                   </dl>
                 </form>
                  
@@ -109,13 +137,47 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> Monitor <br><span>Employee Mental Health</span></h1>
-            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Current Data Points</p>
-            <div id="timer" class="d-flex mb-3">
-						  <div class="time" id="days"></div>
-						  <div class="time pl-4" id="hours"></div>
-						  <div class="time pl-4" id="minutes"></div>
-						  <div class="time pl-4" id="seconds"></div>
-						</div>
+            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Current Service Overview</p>
+             <section class="ftco-counter" id="section-counter" data-stellar-background-ratio="0.2">
+            <div class="row d-md-flex align-items-left ">
+                <div class="col-lg-8">
+                    <div class="row d-md-flex align-items-center">
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                      <div class="text">
+                        <strong class="number" data-number="2000">0</strong>
+                        <span>Users Recorded</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                      <div class="text">
+                        <strong class="number" data-number="20">0</strong>
+                        <span>Countries Covered</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                      <div class="text">
+                        <strong class="number" data-number="50">0</strong>
+                        <span>Percent Users Has Mental Issue</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                      <div class="text">
+                        <strong class="number" data-number="120">0</strong>
+                        <span>Companies Collaborated</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        </section>
           </div>
         </div>
       </div>
@@ -163,7 +225,11 @@
         </div>
       </div>
     </section>
-   
+
+
+               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
     
     
   
@@ -188,6 +254,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="static/js/google-map.js"></script>
   <script src="static/js/main.js"></script>
+
     
   </body>
 </html>

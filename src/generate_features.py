@@ -2,6 +2,8 @@ import numpy as np # linear algebra
 import pandas as pd
 import argparse
 import yaml
+import warnings
+warnings.filterwarnings("ignore")
 
 def clean_gender(my_df):
     # Made gender groups
@@ -35,8 +37,8 @@ def pdtable(key,df):
     return df.groupby(key).size().sort_values(ascending=False)
 
 def clean_data(my_df):
-    my_df.treatment[my_df.treatment == "Yes"] = 1
-    my_df.treatment[my_df.treatment == "No"] = 0
+    my_df.treatment.loc[my_df.treatment == "Yes"] = 1
+    my_df.treatment.loc[my_df.treatment == "No"] = 0
 
     # Treat NA
     my_df = my_df.drop(['comments'], axis=1)  # comments too much NA just drop
@@ -48,8 +50,8 @@ def clean_data(my_df):
     my_df.Gender = pd.Series([1 if x == "male" else 0 for x in my_df.Gender])
 
     # look at age
-    my_df.Age[my_df.Age < 18] = 18
-    my_df.Age[my_df.Age > 80] = 80
+    my_df.Age.loc[my_df.Age < 18] = 18
+    my_df.Age.loc[my_df.Age > 80] = 80
 
     # country and state
     top_10_country = list(pdtable('Country', my_df)[:10].index)
@@ -57,107 +59,107 @@ def clean_data(my_df):
 
     # treat self_employed
     my_df.self_employed.fillna("No", inplace=True)
-    my_df.self_employed[my_df.self_employed == "Yes"] = 1
-    my_df.self_employed[my_df.self_employed == "No"] = 0
+    my_df.self_employed.loc[my_df.self_employed == "Yes"] = 1
+    my_df.self_employed.loc[my_df.self_employed == "No"] = 0
 
     # treat family history
-    my_df.family_history[my_df.family_history == "Yes"] = 1
-    my_df.family_history[my_df.family_history == "No"] = 0
+    my_df.family_history.loc[my_df.family_history == "Yes"] = 1
+    my_df.family_history.loc[my_df.family_history == "No"] = 0
 
     # treat work interfere
     my_df.work_interfere.fillna("Don't Know", inplace=True)
-    my_df.work_interfere[my_df.work_interfere == "Don't Know"] = 0
-    my_df.work_interfere[my_df.work_interfere == "Never"] = 1
-    my_df.work_interfere[my_df.work_interfere == "Rarely"] = 2
-    my_df.work_interfere[my_df.work_interfere == "Sometimes"] = 3
-    my_df.work_interfere[my_df.work_interfere == "Often"] = 4
+    my_df.work_interfere.loc[my_df.work_interfere == "Don't Know"] = 0
+    my_df.work_interfere.loc[my_df.work_interfere == "Never"] = 1
+    my_df.work_interfere.loc[my_df.work_interfere == "Rarely"] = 2
+    my_df.work_interfere.loc[my_df.work_interfere == "Sometimes"] = 3
+    my_df.work_interfere.loc[my_df.work_interfere == "Often"] = 4
 
     # treat no_employee
-    my_df.no_employees[my_df.no_employees == "More than 1000"] = 5
-    my_df.no_employees[my_df.no_employees == "26-100"] = 2
-    my_df.no_employees[my_df.no_employees == "6-25"] = 1
-    my_df.no_employees[my_df.no_employees == "100-500"] = 3
-    my_df.no_employees[my_df.no_employees == "1-5"] = 0
-    my_df.no_employees[my_df.no_employees == "500-1000"] = 4
+    my_df.no_employees.loc[my_df.no_employees == "More than 1000"] = 5
+    my_df.no_employees.loc[my_df.no_employees == "26-100"] = 2
+    my_df.no_employees.loc[my_df.no_employees == "6-25"] = 1
+    my_df.no_employees.loc[my_df.no_employees == "100-500"] = 3
+    my_df.no_employees.loc[my_df.no_employees == "1-5"] = 0
+    my_df.no_employees.loc[my_df.no_employees == "500-1000"] = 4
 
     # remote work
-    my_df.remote_work[my_df.remote_work == "Yes"] = 1
-    my_df.remote_work[my_df.remote_work == "No"] = 0
+    my_df.remote_work.loc[my_df.remote_work == "Yes"] = 1
+    my_df.remote_work.loc[my_df.remote_work == "No"] = 0
 
     # tech company
-    my_df.tech_company[my_df.tech_company == "Yes"] = 1
-    my_df.tech_company[my_df.tech_company == "No"] = 0
+    my_df.tech_company.loc[my_df.tech_company == "Yes"] = 1
+    my_df.tech_company.loc[my_df.tech_company == "No"] = 0
 
     # benefits
-    my_df.benefits[my_df.benefits == "Yes"] = 2
-    my_df.benefits[my_df.benefits == "Don't know"] = 1
-    my_df.benefits[my_df.benefits == "No"] = 0
+    my_df.benefits.loc[my_df.benefits == "Yes"] = 2
+    my_df.benefits.loc[my_df.benefits == "Don't know"] = 1
+    my_df.benefits.loc[my_df.benefits == "No"] = 0
 
     #care option
-    my_df.care_options[my_df.care_options == "Yes"] = 2
-    my_df.care_options[my_df.care_options == "Not sure"] = 1
-    my_df.care_options[my_df.care_options == "No"] = 0
+    my_df.care_options.loc[my_df.care_options == "Yes"] = 2
+    my_df.care_options.loc[my_df.care_options == "Not sure"] = 1
+    my_df.care_options.loc[my_df.care_options == "No"] = 0
 
     # wellness program
-    my_df.wellness_program[my_df.wellness_program == "Yes"] = 2
-    my_df.wellness_program[my_df.wellness_program == "Don't know"] = 1
-    my_df.wellness_program[my_df.wellness_program == "No"] = 0
+    my_df.wellness_program.loc[my_df.wellness_program == "Yes"] = 2
+    my_df.wellness_program.loc[my_df.wellness_program == "Don't know"] = 1
+    my_df.wellness_program.loc[my_df.wellness_program == "No"] = 0
 
     # seek_help
-    my_df.seek_help[my_df.seek_help == "Yes"] = 2
-    my_df.seek_help[my_df.seek_help == "Don't know"] = 1
-    my_df.seek_help[my_df.seek_help == "No"] = 0
+    my_df.seek_help.loc[my_df.seek_help == "Yes"] = 2
+    my_df.seek_help.loc[my_df.seek_help == "Don't know"] = 1
+    my_df.seek_help.loc[my_df.seek_help == "No"] = 0
 
     # annonymity
-    my_df.anonymity[my_df.anonymity == "Yes"] = 2
-    my_df.anonymity[my_df.anonymity == "Don't know"] = 1
-    my_df.anonymity[my_df.anonymity == "No"] = 0
+    my_df.anonymity.loc[my_df.anonymity == "Yes"] = 2
+    my_df.anonymity.loc[my_df.anonymity == "Don't know"] = 1
+    my_df.anonymity.loc[my_df.anonymity == "No"] = 0
 
     # leave
-    my_df.leave[my_df.leave == "Don't know"] = 0
-    my_df.leave[my_df.leave == "Very easy"] = 1
-    my_df.leave[my_df.leave == "Somewhat easy"] = 2
-    my_df.leave[my_df.leave == "Somewhat difficult"] = 3
-    my_df.leave[my_df.leave == "Very difficult"] = 4
+    my_df.leave.loc[my_df.leave == "Don't know"] = 0
+    my_df.leave.loc[my_df.leave == "Very easy"] = 1
+    my_df.leave.loc[my_df.leave == "Somewhat easy"] = 2
+    my_df.leave.loc[my_df.leave == "Somewhat difficult"] = 3
+    my_df.leave.loc[my_df.leave == "Very difficult"] = 4
 
     #mental_health_consequence
-    my_df.mental_health_consequence[my_df.mental_health_consequence == "Yes"] = 2
-    my_df.mental_health_consequence[my_df.mental_health_consequence == "Maybe"] = 1
-    my_df.mental_health_consequence[my_df.mental_health_consequence == "No"] = 0
+    my_df.mental_health_consequence.loc[my_df.mental_health_consequence == "Yes"] = 2
+    my_df.mental_health_consequence.loc[my_df.mental_health_consequence == "Maybe"] = 1
+    my_df.mental_health_consequence.loc[my_df.mental_health_consequence == "No"] = 0
 
     #phys_health_consequence
-    my_df.phys_health_consequence[my_df.phys_health_consequence == "Yes"] = 2
-    my_df.phys_health_consequence[my_df.phys_health_consequence == "Maybe"] = 1
-    my_df.phys_health_consequence[my_df.phys_health_consequence == "No"] = 0
+    my_df.phys_health_consequence.loc[my_df.phys_health_consequence == "Yes"] = 2
+    my_df.phys_health_consequence.loc[my_df.phys_health_consequence == "Maybe"] = 1
+    my_df.phys_health_consequence.loc[my_df.phys_health_consequence == "No"] = 0
 
     # coworkers
-    my_df.coworkers[my_df.coworkers == "Yes"] = 2
-    my_df.coworkers[my_df.coworkers == "Some of them"] = 1
-    my_df.coworkers[my_df.coworkers == "No"] = 0
+    my_df.coworkers.loc[my_df.coworkers == "Yes"] = 2
+    my_df.coworkers.loc[my_df.coworkers == "Some of them"] = 1
+    my_df.coworkers.loc[my_df.coworkers == "No"] = 0
 
     # supervisor
-    my_df.supervisor[my_df.supervisor == "Yes"] = 2
-    my_df.supervisor[my_df.supervisor == "Some of them"] = 1
-    my_df.supervisor[my_df.supervisor == "No"] = 0
+    my_df.supervisor.loc[my_df.supervisor == "Yes"] = 2
+    my_df.supervisor.loc[my_df.supervisor == "Some of them"] = 1
+    my_df.supervisor.loc[my_df.supervisor == "No"] = 0
 
     #mental_health_interview
-    my_df.mental_health_interview[my_df.mental_health_interview == "Yes"] = 2
-    my_df.mental_health_interview[my_df.mental_health_interview == "Maybe"] = 1
-    my_df.mental_health_interview[my_df.mental_health_interview == "No"] = 0
+    my_df.mental_health_interview.loc[my_df.mental_health_interview == "Yes"] = 2
+    my_df.mental_health_interview.loc[my_df.mental_health_interview == "Maybe"] = 1
+    my_df.mental_health_interview.loc[my_df.mental_health_interview == "No"] = 0
 
     #phys_health_interview
-    my_df.phys_health_interview[my_df.phys_health_interview == "Yes"] = 2
-    my_df.phys_health_interview[my_df.phys_health_interview == "Maybe"] = 1
-    my_df.phys_health_interview[my_df.phys_health_interview == "No"] = 0
+    my_df.phys_health_interview.loc[my_df.phys_health_interview == "Yes"] = 2
+    my_df.phys_health_interview.loc[my_df.phys_health_interview == "Maybe"] = 1
+    my_df.phys_health_interview.loc[my_df.phys_health_interview == "No"] = 0
 
     #mental_vs_physical
-    my_df.mental_vs_physical[my_df.mental_vs_physical == "Yes"] = 2
-    my_df.mental_vs_physical[my_df.mental_vs_physical == "Don't know"] = 1
-    my_df.mental_vs_physical[my_df.mental_vs_physical == "No"] = 0
+    my_df.mental_vs_physical.loc[my_df.mental_vs_physical == "Yes"] = 2
+    my_df.mental_vs_physical.loc[my_df.mental_vs_physical == "Don't know"] = 1
+    my_df.mental_vs_physical.loc[my_df.mental_vs_physical == "No"] = 0
 
     #obs_consequence
-    my_df.obs_consequence[my_df.obs_consequence == "Yes"] = 1
-    my_df.obs_consequence[my_df.obs_consequence == "No"] = 0
+    my_df.obs_consequence.loc[my_df.obs_consequence == "Yes"] = 1
+    my_df.obs_consequence.loc[my_df.obs_consequence == "No"] = 0
 
     # one hot country
     country_dummies = pd.get_dummies(my_df['Country'], prefix='country')
@@ -203,7 +205,7 @@ def choose_features(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument('--config', default= '../config/config.yml',help='path to yaml file with configurations')
+    parser.add_argument('--config', default= 'config/config.yml',help='path to yaml file with configurations')
     parser.add_argument('--savecsv', help='Path to where the dataset should be saved to (optional)')
 
     args = parser.parse_args()

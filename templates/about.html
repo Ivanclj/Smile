@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Eventalk - Free Bootstrap 4 Template by Colorlib</title>
+    <title>SMILE - Monitor Mental Health</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -28,7 +28,13 @@
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
   </head>
   <style >
-      #predict {
+
+.ftco-section {
+  padding: 4em 0;
+  position: relative; }
+
+
+  #predict {
     padding:5px 15px; 
     background:#736AFF; 
     border:0 none;
@@ -50,9 +56,9 @@
     color: black;
     position:relative;
     
-    left: -30px;
-    top: 7px;
-    font-size: 17px;
+    left: -40px;
+    top:5px;
+    font-size: 15px;
     cursor:pointer;
   }
 
@@ -60,6 +66,26 @@
     {
       color: silver; /* SET COLOR IN BLACK */
     }   
+
+
+  #contact {
+    padding: 0 ; 
+    background: none; 
+    border: none;
+    color: black;
+    position:relative;
+    
+    left: -25px;
+    top: 5px;
+    font-size: 15px;
+    cursor:pointer;
+  }
+
+  #contact:hover
+    {
+      color: silver; /* SET COLOR IN BLACK */
+    }   
+  
 
   #myChart {
   height:100%;
@@ -87,6 +113,14 @@ zing-grid[loading]{height:nullpx;}
                 <form action="/home" method="POST">
                   <dl>
                   <input type=submit value="Home" id = "home">
+                  </dl>
+                </form>
+                 
+              </form>
+              <form action="{{ url_for('get_contact') }}" method=post class="index">
+                <form action="/contact" method="POST">
+                  <dl>
+                  <input type=submit value="Contact" id = "contact">
                   </dl>
                 </form>
                  
@@ -125,13 +159,7 @@ zing-grid[loading]{height:nullpx;}
     </section> -->
 
     <section class="ftco-section d-md-flex bg-light">
-      <div class="container">
-        <div class="row justify-content-end">
-          <div class="col-md-7">
-            
-          </div>
-        </div>
-      </div>
+
     </section>
 
     <section class="ftco-counter img" id="section-counter">

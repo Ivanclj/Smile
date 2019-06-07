@@ -67,7 +67,7 @@ def tuningRandomizedSearchCV(X,y,model, param_dist, num_times=20, cv=10, n_iter=
 
 
 
-def randomForest(X,y,X_train, y_train, X_test, n_estimators=50, seed=123):
+def randomForest(X,y,X_train, y_train, X_test,best_prams, n_estimators=50, seed=123):
     # Calculating the best parameters
     forest = RandomForestClassifier(n_estimators=n_estimators)
 
@@ -77,11 +77,6 @@ def randomForest(X,y,X_train, y_train, X_test, n_estimators=50, seed=123):
     #               "min_samples_leaf": randint(1, 9),
     #               "criterion": ["gini", "entropy"]}
     # best_prams = tuningRandomizedSearchCV(X,y,forest, param_dist)
-    best_prams = {"max_depth": 6,
-                  "max_features": 7,
-                  "min_samples_split": 7,
-                  "min_samples_leaf": 7,
-                  "criterion": "gini"}
 
     # Building and fitting my_forest
     forest = RandomForestClassifier(max_depth=best_prams['max_depth'],
@@ -100,10 +95,21 @@ def randomForest(X,y,X_train, y_train, X_test, n_estimators=50, seed=123):
     # # Data for final graph
     # methodDict['R. Forest'] = accuracy_score * 100
 
+
     return my_forest
 
 
+def make_data(my_df):
+    X = my_df.drop("treatment", axis=1)
+    y = my_df.treatment
 
+    return X,y
+
+def split_data(X,y,test_size,random_state=123):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size,
+                                                        random_state=random_state)
+
+    return X_train,X_test,y_train,y_test
 
 # read in data
 def main(args):
@@ -118,24 +124,23 @@ def main(args):
 
     # define X and y
     #my_df = my_df.drop('work_interfere', axis=1)
-    X = my_df.drop("treatment", axis=1)
-    y = my_df.treatment
+    X,y = make_data(my_df)
 
     # select features
     y = pd.DataFrame(y)
 
     # save data
 
-    X.to_csv('../data/X.csv')
-    y.to_csv('../data/y.csv')
-
+    X.to_csv(config['data']['X'])
+    y.to_csv(config['data']['y'])
 
     # split X and y into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=123)
-
+    X_train, X_test, y_train, y_test = split_data(X, y, test_size=config['split_data']['test_size'],
+                                                        random_state=config['split_data']['random_state'])
 
     # train model
-    forest = randomForest(X,y,X_train,y_train,X_test,n_estimators=80)
+    best_prams = config['best_params']
+    forest = randomForest(X,y,X_train,y_train,X_test,best_prams,n_estimators=best_prams['n_estimator'])
     print('model done')
 
     # # feature selection
@@ -161,7 +166,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument('--config', default= '../config/config.yml',help='path to yaml file with configurations')
+    parser.add_argument('--config', default= 'config/config.yml',help='path to yaml file with configurations')
     parser.add_argument('--savemodel', help='Path to where the model should be saved to (optional)')
 
     args = parser.parse_args()

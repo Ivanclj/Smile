@@ -190,6 +190,7 @@ def evalClassModel(X,y,model, y_test, y_pred_class, plot=False):
     # predict_mine = np.where(y_pred_prob > 0.50, 1, 0)
     # confusion = metrics.confusion_matrix(y_test, predict_mine)
     # print(confusion)
+    return metrics.roc_auc_score(y_test, y_pred_class)
 
 def evaluate(args):
     with open(args.config, "r") as f:
@@ -209,6 +210,8 @@ def evaluate(args):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=config['split_data']['test_size'],
                                                         random_state= int(config['split_data']['random_state']))
 
+
+
     # make class predictions for the testing set
     y_pred_class = forest.predict(X_test)
 
@@ -218,7 +221,7 @@ def evaluate(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument('--config', default= '../config/config.yml',help='path to yaml file with configurations')
+    parser.add_argument('--config', default= 'config/config.yml',help='path to yaml file with configurations')
 
     args = parser.parse_args()
 

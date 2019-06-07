@@ -8,11 +8,11 @@ Created on 5/27/19
 import os
 import pandas as pd
 from Smile.src.generate_features import clean_data
+import warnings
+warnings.filterwarnings("ignore")
 
 def test_clean_data():
-    my_df = pd.read_csv('data/survey.csv', index_col=0).reset_index()
-
-    my_df = clean_data(my_df)
+    my_df = clean_data(pd.read_csv('data/survey.csv', index_col=0).reset_index())
 
     row = 1158
     columns = 43

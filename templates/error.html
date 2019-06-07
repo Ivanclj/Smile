@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link href="static/basic.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>404 HTML Template by Colorlib</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="static/css/error_style.css" />
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
 </head>
 
+<style >
+#home {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-weight: 700;
+  background-color: #f99827;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+#home:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}	
+
+
+</style>
+
 <body>
-    <h3>
-         <a href = "{{ url_for('index') }}">Penny Lane Music Recommender</a>
-    </h3>
 
-    <div class="alert alert-danger" role="alert">
-  <p class="alert-link">We're sorry. There was a problem accessing the database. Please try back later. </p>
-    </div>
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>4<span></span>4</h1>
+			</div>
+			<h2>Oops! Page Not Be Found</h2>
+			<p>Sorry but the page you are looking for does not exist, have been removed. name changed or is temporarily unavailable</p>
+              <form action="{{ url_for('index') }}" method=get class="index">
+                <form action="/home" method="GET">
+                  <dl>
+                  <input type=submit value="Home" id = "home">
+                  </dl>
+                </form>
+                 
+              </form>
 
-</body>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

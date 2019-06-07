@@ -2,40 +2,49 @@
 
 # To reproduce the trained model object, run `make trained-model`
 
-data/features/example-features.csv: data/sample/music_data_combined.csv src/generate_features.py config/test_model_config.yml
-	python run.py generate_features --config=config/test_model_config.yml --input=data/sample/music_data_combined.csv --output=data/features/example-features.csv
 
-features: data/features/example-features.csv
+all: load_data features trained-model evaluate-model test database
 
-models/example-model.pkl: data/features/example-features.csv src/train_model.py config/test_model_config.yml
-	python run.py train_model --config=config/test_model_config.yml --input=data/features/example-features.csv --output=models/example-model.pkl
+data/survey.csv: src/load_data.py config/config.yml
+	python src/load_data.py
 
-trained-model: models/example-model.pkl
+load_data: data/survey.csv
 
-all: features trained-model
+data/survey_cleaned.csv: data/survey.csv src/generate_features.py config/config.yml
+	python src/generate_features.py
 
-predictions:
-	python pennylane.py --config=config/test_model_config.yml --input=data/sample/data_to_score.csv
+features: data/survey_cleaned.csv
+
+models/sample/random_forest.pkl: data/survey_cleaned.csv src/train_model.py config/config.yml
+	python src/train_model.py
+
+trained-model: models/sample/random_forest.pkl
+
+
+evaluate-model: models/sample/random_forest.pkl data/X.csv data/y.csv config/config.yml src/evaluate_model.py
+	python src/evaluate_model.py
+
+app: models/sample/random_forest.pkl app.py config/flask_config.py database
+	python app.py
+
 
 # Below are some other make functions that do useful things
 
 # Create a virtual environment named pennylane-env
-pennylane-env/bin/activate: requirements.txt
-	test -d pennylane-env || virtualenv pennylane-env
-	. pennylane-env/bin/activate; pip install -r requirements.txt
-	touch pennylane-env/bin/activate
+mentalhealth-env/bin/activate: requirements.txt
+	test -d mentalhealth-env || virtualenv mentalhealth-env
+	. mentalhealth-env/bin/activate; pip install -r requirements.txt
+	touch mentalhealth-env/bin/activate
 
-venv: pennylane-env/bin/activate
+venv: mentalhealth-env/bin/activate
 
 # Create the database
-data/tracks.db:
-	python run.py create
+data/user_predictions.db:
+	python src/database.py
 
-database: data/tracks.db
+database: data/user_predictions.db
 
-# Run the Flask application
-app: database
-	python run.py app
+
 
 # Run all tests
 test:
@@ -43,16 +52,20 @@ test:
 
 # Clean up things
 clean-tests:
-	rm -rf .pytest_cache
-	rm -r test/model/test/
-	mkdir test/model/test
-	touch test/model/test/.gitkeep
+	rm -rf test/__pycache__
+
+clean-src:
+	rm -rf src/__pycache__
+
+clean_data:
+	rm -rf data/*
+	rm -rf models/sample/*
 
 clean-env:
-	rm -r pennylane-env
+	rm -r mentalhealth-env
 
 clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	rm -rf .pytest_cache
+	find . -name '*pycache' -exec rm -f {} +
+	rm -rf __pycache__
 
-clean: clean-tests clean-env clean-pyc
+clean: clean-tests clean-src clean-pyc clean_data
