@@ -56,8 +56,6 @@ Also contains all docs for different functions of the app
 │   ├── archive                       <- Develop notebooks no longer being used.
 │
 ├── src                               <- Source data for the project
-│   ├── helpers/                      <- Helper scripts used in main src files.
-│   ├── sql/                          <- SQL source code.
 │   ├── import_data_github.py         <- Script for downloading raw data from github. 
 │   ├── import_data_s3.py             <- Script for downloading raw data from a public aws s3 bucket. 
 │   ├── upload_data.py                <- Script for uploading data files to S3 bucket. 
@@ -194,6 +192,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3ODY5MTMxOSwtMTQwMDc5NjY5MCwtMT
-UwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ==
+eyJoaXN0b3J5IjpbMTQyMzg4NTAxNCwxODc4NjkxMzE5LC0xND
+AwNzk2NjkwLC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMz
+ODU3NV19
 -->
