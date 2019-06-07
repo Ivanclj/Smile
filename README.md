@@ -41,7 +41,11 @@ You can see the full charter at docs/ProjectCharter.md
 ├── README.md                         <- You are here
 
 ├── config                            <- Directory for yaml configuration files for feature generation, model training, evaluation, etc.
-├── config.py                         <- Configuration file for Flask app
+|   ├── config.yml                    <- Configuration file for files in src/
+|
+|   ├── flask_config.py               <- Configuration file for Flask app
+|
+
 │   ├── logging/                      <- Configuration files for python loggers
 │
 ├── data                              <- Folder that contains data used or generated as well as databases for the app
@@ -196,7 +200,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDUwNjI0MiwzODY1NTE2MzIsNzYzMD
+eyJoaXN0b3J5IjpbLTYyNTk5OTA5OSwzODY1NTE2MzIsNzYzMD
 Q3NjU3LDE0MjM4ODUwMTQsMTg3ODY5MTMxOSwtMTQwMDc5NjY5
 MCwtMTUwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ
 ==
