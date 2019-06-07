@@ -1,7 +1,7 @@
-Download data:
+## Download data:  
 src/load_my_data.py : this script download data from my GitHub repo to ../data/data1.csv
 
-Upload data:
+## Upload data:  
 src/upload_data.py: upload data to target s3 bucket
 
 Requirement: boto 3 installed and have configured aws environment. (Check if have ~/.aws/credential file and if have access key and secret key in the file)
@@ -14,7 +14,7 @@ Argument to be specified in bash:
 
 --output_path: output file path
 
-Create database in RDS/local:
+## Create database in RDS/local:  
 src/sql/model_test.py: create table defined within script in either RDS or local based on argument
 
 Requirement:
