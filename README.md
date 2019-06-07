@@ -66,16 +66,13 @@ Also contains all docs for different functions of the app
 ├── test                              <- Files necessary for running model tests (see documentation below) 
 │   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
 │
-│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│   ├── test_generate_features.py.py                       <- Script for running unit tests on src/generate_features.py.py.
 │
-│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│   ├── test_train_model.py.py                       <- Script for running unit tests on src/train_model.py.
 │
-│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│   ├── test_evaluate_models.py                       <- Script for running unit tests on src/evaluate_models.py.
 │
-│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
-│
-│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
-│
+
 ├── static/                           <- CSS, JS files that remain static
 ├── templates/                        <- HTML (or other code) that is templated and changes based on a set of inputs
 ├── run.py                            <- Simplifies the execution of one or more of the src scripts 
@@ -198,7 +195,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTczODk3MjAxLDc2MzA0NzY1NywxNDIzOD
+eyJoaXN0b3J5IjpbMzg2NTUxNjMyLDc2MzA0NzY1NywxNDIzOD
 g1MDE0LDE4Nzg2OTEzMTksLTE0MDA3OTY2OTAsLTE1MDMxNTk5
 NzgsLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
 -->
