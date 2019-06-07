@@ -134,8 +134,8 @@ make all
 DEBUG = True  # Keep True for debugging, change to False when moving to production 
 LOGGING_CONFIG = "config/logging/local.conf"  # Path to file that configures Python logger
 SQLALCHEMY_DATABASE_URI # URL for database that contains bank customers
-PORT = 3002  # What port to expose app on - CHANGE TO 3000 if running on RDS
-HOST = "127.0.0.1" # Host IP for the app - CHANGE TO "0.0.0.0" if running on RDS
+PORT = 3000  # What port to expose app on 
+HOST = "0.0.0.0" # Host IP for the app 
 ```
 
 
@@ -193,7 +193,8 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDE4MDI2LDM4NjU1MTYzMiw3NjMwND
-c2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5LC0xNDAwNzk2Njkw
-LC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
+eyJoaXN0b3J5IjpbLTEzMzY4NzA4MTIsMTQzNDE4MDI2LDM4Nj
+U1MTYzMiw3NjMwNDc2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5
+LC0xNDAwNzk2NjkwLC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLD
+g3MDMzODU3NV19
 -->
