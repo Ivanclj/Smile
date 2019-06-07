@@ -175,14 +175,14 @@ Please add the following line at the very beginning of `app.py`:
 
 ### 5. Interact with the application
 
-Go to [http://0.0.0.0:3000/]( http://0.0.0.0:300/) to interact with the current version of the app locally. 
+Go to [http://0.0.0.0:3000/]( http://0.0.0.0:3000/) to interact with the current version of the app locally. 
 
 ## Testing 
 
 Run `make test` from the command line in the main project repository. 
 
 
-Tests exist in `test/test.py`
+Tests exist in `test/`
 
 ### Works Cited
 
@@ -193,8 +193,5 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjY1Mjk3NDgsMTQzNDE4MDI2LDM4Nj
-U1MTYzMiw3NjMwNDc2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5
-LC0xNDAwNzk2NjkwLC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLD
-g3MDMzODU3NV19
+eyJoaXN0b3J5IjpbNTY2MTQyNjkxXX0=
 -->
