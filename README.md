@@ -56,15 +56,13 @@ Also contains all docs for different functions of the app
 │   ├── archive                       <- Develop notebooks no longer being used.
 │
 ├── src                               <- Source data for the project
-│   ├── load_data.py         <- Script for downloading raw data from github. 
+│   ├── load_data.py         <- Script for downloading raw data from github to data folder. 
 │   ├── upload_data.py                <- Script for uploading data files to S3 bucket. 
 │   ├── generate_features.py          <- Script for cleaning and transforming data and generating features used for training and scoring.
 │   ├── train_model.py                <- Script for training a machine learning model.
-│   ├── score_model.py                <- Script for scoring new predictions using a trained model.
 │   ├── evaluate_model.py             <- Script for evaluating model performance.
-│   ├── models.py                     <- Creates the data model for the database connected to the Flask app.
-│   ├── README.md                     <- Documentation with instructions to run scripts in src/ and midproject check.
-│
+│   ├── database.py                     <- Creates the data model for the database connected to the Flask app.
+
 ├── test                              <- Files necessary for running model tests (see documentation below) 
 │   ├── test.py                       <- Script for running unit tests on functions in src/.
 │
@@ -190,7 +188,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNzMyNTcwMiw3NjMwNDc2NTcsMTQyMz
+eyJoaXN0b3J5IjpbLTkwMDU4ODI5OSw3NjMwNDc2NTcsMTQyMz
 g4NTAxNCwxODc4NjkxMzE5LC0xNDAwNzk2NjkwLC0xNTAzMTU5
 OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
 -->
