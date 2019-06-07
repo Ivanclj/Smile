@@ -62,9 +62,19 @@ Also contains all docs for different functions of the app
 │   ├── train_model.py                <- Script for training a machine learning model.
 │   ├── evaluate_model.py             <- Script for evaluating model performance.
 │   ├── database.py                     <- Creates the data model for the database connected to the Flask app.
-
+|
 ├── test                              <- Files necessary for running model tests (see documentation below) 
-│   ├── test.py                       <- Script for running unit tests on functions in src/.
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
+│
+│   ├── test_load_data.py                       <- Script for running unit tests on src/load_data.py.
 │
 ├── static/                           <- CSS, JS files that remain static
 ├── templates/                        <- HTML (or other code) that is templated and changes based on a set of inputs
@@ -188,7 +198,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDU4ODI5OSw3NjMwNDc2NTcsMTQyMz
-g4NTAxNCwxODc4NjkxMzE5LC0xNDAwNzk2NjkwLC0xNTAzMTU5
-OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
+eyJoaXN0b3J5IjpbOTczODk3MjAxLDc2MzA0NzY1NywxNDIzOD
+g1MDE0LDE4Nzg2OTEzMTksLTE0MDA3OTY2OTAsLTE1MDMxNTk5
+NzgsLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
 -->
