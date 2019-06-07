@@ -6,7 +6,6 @@
 <!-- toc -->
 
 - [Project Charter](#project-charter)
-- [Project Planning](#project-planning)
 - [Repo structure](#repo-structure)
 - [Documentation](#documentation)
 - [Instructions on getting data and database](#instructions-on-getting-data-and-database-ready)
@@ -34,63 +33,171 @@ Help users to find out whether they need treatment for mental health problems by
 1. Machine Learning metric: The model would be evaluated on misclassification rate of whether predicted the correct outcome. A misclassification rate of 10% or lower denotes success  
 2. Business metric: A Click through rate of 70% to see the detailed report from the user end and a MAU of 1,000 would denote success
 
-## [](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-planning)Project Planning
+You can see the full charter at docs/ProjectCharter.md
 
--   _**Theme**_: The theme of this project is to develop a web app that enables users to find out whether they need to receive treatment for potential mental issues. Besides, the app would help them to learn what are important factors affecting the result
--   _**Epics**_:
-    -   Data Preparation and Exploration:  
-        At this stage, Data preparation and exploration would be done.
-        
-        -   story 1: Data Preparation
-            -   Download mental survey datasets from Kaggle
-            -   Clean datasets by removing/imputing NA values, treating outliers and influential points and removing duplicate records
-            -   Treat potential unbalanced outcome class problem
-        -   story 2: Data Exploration
-            -   Explore data by calculating descriptive statistics (mean,min,max etc.) and plotting them for important covariates
-            -   Check skewness of covariates and fix them if exist
-            -   Engineer features such as breaking address into city and states to create more aggregated and meaningful features
-            -   Perform feature selection for model building later
-    -   Model Construction:  
-        At this stage, The full model would be constructed and generate desired output to pass all success metrics.
-        
-        -   story 1: Model Initialization
-            
-            -   Random split datasets into 80% training and 20% testing
-            -   Try various classification model such as Logistic Regression, Random Forest, XGBoost, Neural Nets and Support Vector Machine
-            -   Model will be implemented using Scikit-Learn and Keras
-        -   story 2: Model Tunning
-            
-            -   Perform Grid/Random Search or utilize Scikit-optimizer library to find best hyperparameter for each model
-            -   Compare different models using 10-fold cross validation to select the best model with the lowest misclassification rate
-    -   Model Deployment:  
-        At this stage, the full model would be deployed onto AWS and also the web app should be developed to wrap up the project.
-        
-        -   story 1: Transition from Local to AWS
-            -   Write unit tests and model reproducible tests and pass them locally
-            -   Export dependencies for the model
-            -   Move datasets and model related files onto AWS environment
-            -   Run through pipeline to make sure no bugs occurred and write necessary logging files
-        -   story 2: App Development
-            -   Write necessary backend structure using flask and link the database where user information would be saved
-            -   Design frontend user interface to have users input their company, salary, location, education and so on to collect information necessary to make the prediction
-            -   Design a detailed information page where user could learn what are important factors that affects results
-        -   story 3: App Improvement
-            -   Add more functionalities to allow user to see visualizations of their answers among all users
-            -   Add potential visual components if time permits
+## Repo structure 
 
-## [](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#backlog)Backlog
+```
+├── README.md                         <- You are here
+│
+├── app 
+│   ├── __init__.py                   <- Initializes the Flask app and database connection
+│
+├── config                            <- Directory for yaml configuration files for feature generation, model training, scoring, etc.
+│   ├── logging/                      <- Configuration files for python loggers
+│
+├── data                              <- Folder that contains data used or generated. Only the sample/ and database/ subdirectories are tracked by git. 
+│   ├── sample/                       <- External data used for code development and testing, will be synced with git
+│   ├── database/                     <- Database with initial customers used for app, will be synced with git
+│
+├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
+│
+├── models                            <- Trained model objects (TMOs), model predictions, and model evaluations.
+│
+├── notebooks
+│   ├── develop                       <- Current notebooks being used in development.
+│   ├── deliver                       <- Notebooks shared with others. 
+│   ├── archive                       <- Develop notebooks no longer being used.
+│
+├── src                               <- Source data for the project
+│   ├── helpers/                      <- Helper scripts used in main src files.
+│   ├── sql/                          <- SQL source code.
+│   ├── import_data_github.py         <- Script for downloading raw data from github. 
+│   ├── import_data_s3.py             <- Script for downloading raw data from a public aws s3 bucket. 
+│   ├── upload_data.py                <- Script for uploading data files to S3 bucket. 
+│   ├── load_data.py                  <- Script for loading data files saved to desired location. 
+│   ├── generate_features.py          <- Script for cleaning and transforming data and generating features used for training and scoring.
+│   ├── train_model.py                <- Script for training a machine learning model.
+│   ├── score_model.py                <- Script for scoring new predictions using a trained model.
+│   ├── evaluate_model.py             <- Script for evaluating model performance.
+│   ├── models.py                     <- Creates the data model for the database connected to the Flask app.
+│   ├── README.md                     <- Documentation with instructions to run scripts in src/ and midproject check.
+│
+├── test                              <- Files necessary for running model tests (see documentation below) 
+│   ├── test.py                       <- Script for running unit tests on functions in src/.
+│
+├── static/                           <- CSS, JS files that remain static
+├── templates/                        <- HTML (or other code) that is templated and changes based on a set of inputs
+├── run.py                            <- Simplifies the execution of one or more of the src scripts 
+├── app.py                            <- Flask wrapper for running the model 
+├── config.py                         <- Configuration file for Flask app
+├── requirements.txt                  <- Python package dependencies 
+```
+This project structure was partially influenced by the [Cookiecutter Data Science project](https://drivendata.github.io/cookiecutter-data-science/).
 
-1.  Theme.epic1.story1: Data Preparation (4 point) -Planned
-2.  Theme.epic1.story2: Data Exploration (4 point) -Planned
-3.  Theme.epic2.story1: Model Initialization (4 point) -Planned
-4.  Theme.epic2.story2: Model Tuning (8 points)
-5.  Theme.epic3.story1: Transition from Local to AWS (4 points)
-6.  Theme.epic3.story2: App Development (8 points)
+## Documentation
+ 
+* Open up `docs/build/html/index.html` to see Sphinx documentation docs. 
+* See `docs/README.md` for keeping docs up to date with additions to the repository.
 
-## [](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#icebox)IceBox
+## Instructions on getting data and database ready
 
-1.  Theme.epic3.story3: App Improvement (8 points)
+* See `src/README.md` for detailed guidelines to run scripts for retrieving project data and setting database
+
+
+## Running the application 
+### 1. Set up environment 
+
+The `requirements.txt` file contains the packages required to run the model code. An environment can be set up in two ways. First, `cd path_to_repo`
+
+#### With `virtualenv`
+
+```bash
+pip install virtualenv
+
+virtualenv pennylane
+
+source pennylane/bin/activate
+
+pip install -r requirements.txt
+
+```
+#### With `conda`
+
+```bash
+conda create -n tibank python=3.7
+conda activate tibank
+pip install -r requirements.txt
+(optional): to solve Command 'pip' not found: conda install pip then pip install -r requirements.txt
+
+```
+
+### (Optional) Reproduce Model Development
+
+To reproduce the whole model development process locally using Makefile, run following from command line in the main project repository:
+
+```bash
+export SQLALCHEMY_DATABASE_URI='sqlite:///data/database/churn_prediction.db'
+make all
+```
+
+### 2. Configure Flask app 
+
+`config.py` holds the configurations for the Flask app. It includes the following configurations:
+
+```python
+DEBUG = True  # Keep True for debugging, change to False when moving to production 
+LOGGING_CONFIG = "config/logging/local.conf"  # Path to file that configures Python logger
+SQLALCHEMY_DATABASE_URI # URL for database that contains bank customers
+PORT = 3002  # What port to expose app on - CHANGE TO 3000 if running on RDS
+HOST = "127.0.0.1" # Host IP for the app - CHANGE TO "0.0.0.0" if running on RDS
+```
+
+
+### 3. Initialize the database 
+
+To create a database in the local location configured in `config.py` with five initial customers, run: 
+
+Note: an empty folder named database under <path_to_main_repository>/data has to be created to save the db. For creating a database on RDS, please refer to README.md in src/ folder.
+
+```bash
+cd path_to_repo/src
+python models.py
+```
+
+
+### 4. Run the application 
+To set up environment variable SQLALCHEMY_DATABASE_URI (URL for database that contains bank customers) from command line in the main project repository:
+ ```bash
+ cd path_to_repo
+ Run locally: export SQLALCHEMY_DATABASE_URI='sqlite:///data/database/churn_prediction.db'
+ Run on RDS: export SQLALCHEMY_DATABASE_URI="{conn_type}://{user}:{password}@{host}:{port}/{DATABASE_NAME}"
+ ```
+
+then
+ ```bash
+ python app.py
+ ```
+
+:bulb: Tip:
+When encountering the following error:
+
+    OSError: [Errno 8] Exec format error
+Please add the following line at the very beginning of `app.py`:
+```
+#!/usr/bin/env python
+```
+
+### 5. Interact with the application
+
+Go to [http://127.0.0.1:3002/]( http://127.0.0.1:3002/) to interact with the current version of the app locally. 
+
+## Testing 
+
+Run `make test` from the command line in the main project repository. 
+
+
+Tests exist in `test/test.py`
+
+### Works Cited
+
+General HTML Templates, CSS, js credit to Colorlib https://colorlib.com/wp/template/ (Woodrox, Dup, Maxitechture) and W3Schools https://www.w3schools.com/howto/ (buttons, styles, error page)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDMxNTk5NzgsLTE3MTQzNDE1ODIsOD
-cwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
+-->
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0MDA3OTY2OTAsLTE1MDMxNTk5NzgsLT
+E3MTQzNDE1ODIsODcwMzM4NTc1XX0=
 -->
