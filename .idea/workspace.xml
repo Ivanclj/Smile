@@ -1,365 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40ff793c-bcb9-4391-89cd-5330fd023917" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile-with-args" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/aos.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap-datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/css/mixins/_text-hide.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/jquery.timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/open-iconic-bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/pred_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/backup.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/Flaticon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/Flaticon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/Flaticon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/Flaticon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/Flaticon.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/_flaticon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/font/flaticon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/flaticon/license/license.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/icomoon/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/icomoon/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/icomoon/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/icomoon/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/css/_ionicons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/fonts/ionicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/fonts/ionicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/fonts/ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/fonts/ionicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/ionicons/fonts/ionicons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/css/material-design-iconic-font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/css/material-design-iconic-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/OFL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/montserrat-v12-latin-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/montserrat-v12-latin-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/montserrat-v12-latin-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/montserrat-v12-latin-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/montserrat/montserrat-v12-latin-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/open-iconic/open-iconic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/open-iconic/open-iconic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/open-iconic/open-iconic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/open-iconic/open-iconic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/open-iconic/open-iconic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-italic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/bg-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/bg_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/image_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/loc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/mental-dbl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/mental_health.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/mental_healthbg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/person_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/person_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/person_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/person_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/signup-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/speaker-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/aos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/google-map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery-migrate-3.0.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.animateNumber.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.stellar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/prediction_main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/range.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/scrollax.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/vendor/jquery/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/blog-single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/prediction.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/auxiliary/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/auxiliary/genres.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/features/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/data_to_score.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music/musicfile9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample/music_data_combined.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user_predictions.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/user_predictions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/random_forest.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/sample/example-music-prediction.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/sample/random_forest.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/sample/random_forest.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pennylane.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evaluate_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluate_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate_features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/helpers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/load_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/load_my_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/postprocess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sql/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/bg_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/image_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/loc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/mental_healthbg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/person_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/person_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/person_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/person_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/signup-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/speaker-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog-single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/prediction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prediction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_generate_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_generate_features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_load_data.py" afterDir="false" />
-    </list>
+    <list default="true" id="40ff793c-bcb9-4391-89cd-5330fd023917" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -373,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="975">
-              <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+              <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
               <folding>
                 <element signature="e#1#17#0" expanded="true" />
               </folding>
@@ -390,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_model.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/train_model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -406,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/evaluate_model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2483">
-              <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+              <caret line="216" selection-start-line="216" selection-end-line="216" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -414,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
@@ -504,11 +146,6 @@
               <item name="Smile" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="logging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Smile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Smile" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Smile" type="b2602c69:ProjectViewProjectNode" />
@@ -920,30 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/flask_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-          <folding>
-            <element signature="e#1#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_generate_features.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -957,7 +570,7 @@
     <entry file="file://$PROJECT_DIR$/src/evaluate_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2483">
-          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -984,10 +597,34 @@
     <entry file="file://$PROJECT_DIR$/src/train_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+          <folding>
+            <element signature="e#1#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/flask_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="10" />
         </state>
       </provider>
     </entry>
