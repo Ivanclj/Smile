@@ -164,7 +164,7 @@ def add_entry():
                                  coworksers=coworksers,
                                  family_history=family_history,
                                  no_employees=no_employees,
-                                 predicted_score=prob,
+                                 predicted_score=float(prob),
                                  )
         db.session.add(track1)
         db.session.commit()

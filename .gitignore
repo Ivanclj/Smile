@@ -2,12 +2,11 @@
 .DS_Store
 **/.DS_Store
 logfile
-
+.idea/workspace.xml
 
 ## directory
 .pytest_cache/
 .idea/
-**/.idea
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

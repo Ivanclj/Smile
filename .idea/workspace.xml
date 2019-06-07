@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40ff793c-bcb9-4391-89cd-5330fd023917" name="Default" comment="" />
+    <list default="true" id="40ff793c-bcb9-4391-89cd-5330fd023917" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/X.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/survey.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/survey_cleaned.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/user_predictions.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/y.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/sample/random_forest.pkl" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+            <state relative-caret-position="275">
+              <caret line="166" column="60" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
               <folding>
                 <element signature="e#1#17#0" expanded="true" />
               </folding>
@@ -56,11 +64,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="570">
               <caret line="38" column="10" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -109,11 +126,11 @@
         <option value="$PROJECT_DIR$/src/database.py" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/config/config.yml" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/test/test_train_model.py" />
         <option value="$PROJECT_DIR$/src/train_model.py" />
         <option value="$PROJECT_DIR$/src/evaluate_model.py" />
         <option value="$PROJECT_DIR$/test/test_evaluate_models.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -506,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="57" column="4" selection-end-line="66" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -594,6 +604,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/flask_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/train_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -606,25 +637,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+        <state relative-caret-position="275">
+          <caret line="166" column="60" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
           <folding>
             <element signature="e#1#17#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/flask_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="10" />
         </state>
       </provider>
     </entry>
