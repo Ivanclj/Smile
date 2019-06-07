@@ -3,12 +3,26 @@
 #### QA: Si(Angela) Chen
 # Outline
 
--   [Project Charter](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-charter)
--   [Project Planning](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-planning)
--   [Backlog](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#backlog)
--   [IceBox](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#IceBox)
+<!-- toc -->
 
-## [](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-charter)Project Charter
+- [Project Charter](#project-charter)
+- [Project Planning](#project-planning)
+- [Repo structure](#repo-structure)
+- [Documentation](#documentation)
+- [Instructions on getting data and database](#instructions-on-getting-data-and-database-ready)
+- [Running the application](#running-the-application)
+  * [1. Set up environment](#1-set-up-environment)
+    + [With `virtualenv` and `pip`](#with-virtualenv)
+    + [With `conda`](#with-conda)
+  * [Reproduce Model Development](#optional-reproduce-model-development)
+  * [2. Configure Flask app](#2-configure-flask-app)
+  * [3. Initialize the database](#3-initialize-the-database)
+  * [4. Run the application](#4-run-the-application)
+  * [5. Interact with the application](#5-interact-with-the-application)
+- [Testing](#testing)
+
+
+## Project Charter
 
 **Vision**:  
 This app would allows employees at Tech companies to find out whether they need to seek treatment for potential mental health issues. It also helps Tech companies to track the mental health of their employees and provide them with necessary assistance if needed
@@ -77,5 +91,6 @@ Help users to find out whether they need treatment for mental health problems by
 
 1.  Theme.epic3.story3: App Improvement (8 points)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbLTE1MDMxNTk5NzgsLTE3MTQzNDE1ODIsOD
+cwMzM4NTc1XX0=
 -->
