@@ -141,13 +141,13 @@ HOST = "0.0.0.0" # Host IP for the app
 
 ### 3. Initialize the database 
 
-To create a database in the local location configured in `config.py` with five initial customers, run: 
+To create a database in the local location configured in `config.py`, run: 
 
 Note: an empty folder named database under <path_to_main_repository>/data has to be created to save the db. For creating a database on RDS, please refer to README.md in src/ folder.
 
 ```bash
 cd path_to_repo/src
-python models.py
+python database.py
 ```
 
 
@@ -193,8 +193,8 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzY4NzA4MTIsMTQzNDE4MDI2LDM4Nj
-U1MTYzMiw3NjMwNDc2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5
-LC0xNDAwNzk2NjkwLC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLD
-g3MDMzODU3NV19
+eyJoaXN0b3J5IjpbLTQ1ODI3MDY3NCwxNDM0MTgwMjYsMzg2NT
+UxNjMyLDc2MzA0NzY1NywxNDIzODg1MDE0LDE4Nzg2OTEzMTks
+LTE0MDA3OTY2OTAsLTE1MDMxNTk5NzgsLTE3MTQzNDE1ODIsOD
+cwMzM4NTc1XX0=
 -->
