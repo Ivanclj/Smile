@@ -47,7 +47,8 @@ You can see the full charter at docs/ProjectCharter.md
 ├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
 Also contains all docs for different functions of the app
 │
-├── models                            <- Trained model objects (TMOs), model predictions, and model evaluations.
+├── models                            <- Trained model objects (TMOs)
+│   ├── sample/   					  <- Folder that contains pickle file of the model
 │
 ├── notebooks
 │   ├── develop                       <- Current notebooks being used in development.
@@ -193,6 +194,6 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzcxMzAwNzYsLTE0MDA3OTY2OTAsLT
-E1MDMxNTk5NzgsLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbMTg3ODY5MTMxOSwtMTQwMDc5NjY5MCwtMT
+UwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ==
 -->
