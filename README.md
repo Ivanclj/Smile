@@ -56,8 +56,7 @@ Also contains all docs for different functions of the app
 │   ├── archive                       <- Develop notebooks no longer being used.
 │
 ├── src                               <- Source data for the project
-│   ├── import_data_github.py         <- Script for downloading raw data from github. 
-│   ├── import_data_s3.py             <- Script for downloading raw data from a public aws s3 bucket. 
+│   ├── load_data.py         <- Script for downloading raw data from github. 
 │   ├── upload_data.py                <- Script for uploading data files to S3 bucket. 
 │   ├── load_data.py                  <- Script for loading data files saved to desired location. 
 │   ├── generate_features.py          <- Script for cleaning and transforming data and generating features used for training and scoring.
@@ -192,7 +191,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMzg4NTAxNCwxODc4NjkxMzE5LC0xND
-AwNzk2NjkwLC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMz
-ODU3NV19
+eyJoaXN0b3J5IjpbNzYzMDQ3NjU3LDE0MjM4ODUwMTQsMTg3OD
+Y5MTMxOSwtMTQwMDc5NjY5MCwtMTUwMzE1OTk3OCwtMTcxNDM0
+MTU4Miw4NzAzMzg1NzVdfQ==
 -->
