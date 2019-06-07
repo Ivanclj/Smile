@@ -40,14 +40,12 @@ You can see the full charter at docs/ProjectCharter.md
 ```
 ├── README.md                         <- You are here
 
-├── config                            <- Directory for yaml configuration files for feature generation, model training, scoring, etc.
+├── config                            <- Directory for yaml configuration files for feature generation, model training, evaluation, etc.
 │   ├── logging/                      <- Configuration files for python loggers
 │
-├── data                              <- Folder that contains data used or generated. Only the sample/ and database/ subdirectories are tracked by git. 
-│   ├── sample/                       <- External data used for code development and testing, will be synced with git
-│   ├── database/                     <- Database with initial customers used for app, will be synced with git
-│
+├── data                              <- Folder that contains data used or generated as well as databases for the app
 ├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
+Also contains all docs for different functions of the app
 │
 ├── models                            <- Trained model objects (TMOs), model predictions, and model evaluations.
 │
@@ -195,6 +193,6 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ5MTcyNzI1LC0xNDAwNzk2NjkwLC0xNT
-AzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
+eyJoaXN0b3J5IjpbLTE2NzcxMzAwNzYsLTE0MDA3OTY2OTAsLT
+E1MDMxNTk5NzgsLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
 -->
