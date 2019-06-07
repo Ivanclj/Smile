@@ -39,10 +39,7 @@ You can see the full charter at docs/ProjectCharter.md
 
 ```
 ├── README.md                         <- You are here
-│
-├── app 
-│   ├── __init__.py                   <- Initializes the Flask app and database connection
-│
+
 ├── config                            <- Directory for yaml configuration files for feature generation, model training, scoring, etc.
 │   ├── logging/                      <- Configuration files for python loggers
 │
@@ -198,6 +195,6 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDA3OTY2OTAsLTE1MDMxNTk5NzgsLT
-E3MTQzNDE1ODIsODcwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbMzQ5MTcyNzI1LC0xNDAwNzk2NjkwLC0xNT
+AzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
 -->
