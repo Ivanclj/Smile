@@ -1,4 +1,7 @@
 # Smile
+## Developer: Lingjun Chen
+#### QA: Si(Angela) Chen
+# Outline
 
 -   [Project Charter](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-charter)
 -   [Project Planning](https://github.com/Ivanclj/Smile/blob/d35348804c4b6943c13673f204d25871ecf6d078/README.md#project-planning)
@@ -74,5 +77,5 @@ Help users to find out whether they need treatment for mental health problems by
 
 1.  Theme.epic3.story3: App Improvement (8 points)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcwMzM4NTc1XX0=
+eyJoaXN0b3J5IjpbLTE3MTQzNDE1ODIsODcwMzM4NTc1XX0=
 -->
