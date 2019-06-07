@@ -86,14 +86,9 @@ Also contains all docs for different functions of the app
 ```
 This project structure was partially influenced by the [Cookiecutter Data Science project](https://drivendata.github.io/cookiecutter-data-science/).
 
-## Documentation
- 
-* Open up `docs/build/html/index.html` to see Sphinx documentation docs. 
-* See `docs/README.md` for keeping docs up to date with additions to the repository.
-
 ## Instructions on getting data and database ready
 
-* See `src/README.md` for detailed guidelines to run scripts for retrieving project data and setting database
+* See `docs/database.md` for detailed guidelines to run scripts for retrieving project data and setting database
 
 
 ## Running the application 
@@ -106,9 +101,9 @@ The `requirements.txt` file contains the packages required to run the model code
 ```bash
 pip install virtualenv
 
-virtualenv pennylane
+virtualenv Smile
 
-source pennylane/bin/activate
+source Smile/bin/activate
 
 pip install -r requirements.txt
 
@@ -116,10 +111,9 @@ pip install -r requirements.txt
 #### With `conda`
 
 ```bash
-conda create -n tibank python=3.7
-conda activate tibank
+conda create -n Smile python=3.6
+conda activate Smile
 pip install -r requirements.txt
-(optional): to solve Command 'pip' not found: conda install pip then pip install -r requirements.txt
 
 ```
 
@@ -199,7 +193,8 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4NTk5OTIzLDM4NjU1MTYzMiw3NjMwND
-c2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5LC0xNDAwNzk2Njkw
-LC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
+eyJoaXN0b3J5IjpbMTA1NDAzMzkxNSwzODY1NTE2MzIsNzYzMD
+Q3NjU3LDE0MjM4ODUwMTQsMTg3ODY5MTMxOSwtMTQwMDc5NjY5
+MCwtMTUwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ
+==
 -->
