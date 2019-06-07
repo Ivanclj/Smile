@@ -122,7 +122,7 @@ pip install -r requirements.txt
 To reproduce the whole model development process locally using Makefile, run following from command line in the main project repository:
 
 ```bash
-export SQLALCHEMY_DATABASE_URI='sqlite:///data/database/churn_prediction.db'
+export SQLALCHEMY_DATABASE_URI='sqlite:///data/user.db'
 make all
 ```
 
@@ -193,8 +193,7 @@ eyJoaXN0b3J5IjpbLTMwNTQ0NjcxXX0=
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDAzMzkxNSwzODY1NTE2MzIsNzYzMD
-Q3NjU3LDE0MjM4ODUwMTQsMTg3ODY5MTMxOSwtMTQwMDc5NjY5
-MCwtMTUwMzE1OTk3OCwtMTcxNDM0MTU4Miw4NzAzMzg1NzVdfQ
-==
+eyJoaXN0b3J5IjpbMTQzNDE4MDI2LDM4NjU1MTYzMiw3NjMwND
+c2NTcsMTQyMzg4NTAxNCwxODc4NjkxMzE5LC0xNDAwNzk2Njkw
+LC0xNTAzMTU5OTc4LC0xNzE0MzQxNTgyLDg3MDMzODU3NV19
 -->
