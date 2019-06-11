@@ -15,7 +15,7 @@ Argument to be specified in bash:
 --output_path: output file path
 
 ## Create database in RDS/local:  
-src/sql/model_test.py: create table defined within script in either RDS or local based on argument
+src/database.py: create table defined within script in either RDS or local based on argument
 
 Requirement:
 Have exported username, password, host and port for RDS as environment variables if want to use

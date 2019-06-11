@@ -190,8 +190,6 @@ python src/upload_data.py --input_file_path FILE_PATH --bucket_name S3_BUCKET_NA
 
 To create a database locally, run: 
 
-Note: an empty folder named database under <path_to_main_repository>/data has to be created to save the db. For creating a database on RDS, please refer to docs/database.md.
-
 ```bash
 make database
 
@@ -200,6 +198,16 @@ or
 python src/database.py
 ```
 
+To create a database on RDS, make sure you have exported username, password, host and port for RDS as environment variables, check by running:
+```bash
+vi ~/.mysqlconfig
+
+``` 
+create database on RDS, run:
+```bash
+
+python src/database.py --RDS True
+```
 
 ### 4. Run the application 
 To set up environment variable SQLALCHEMY_DATABASE_URI (URL for database that contains bank customers) from command line in the main project repository:
