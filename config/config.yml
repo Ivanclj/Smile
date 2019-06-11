@@ -12,6 +12,9 @@ load_data:
     read_path: https://raw.githubusercontent.com/Ivanclj/proj_data/master/survey.csv
     save_path: data/survey.csv
 
+upload_data:
+
+
 generate_features:
   read_path: data/survey.csv
   choose_features:
@@ -47,6 +50,6 @@ evaluate_model:
     train_size: 0.8
     test_size: 0.2
     random_state: 41
-  save_scores: test/model/test/example-music-test-scores.csv
+
 
 

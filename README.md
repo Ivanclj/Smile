@@ -117,18 +117,54 @@ pip install -r requirements.txt
 
 ```
 
-### (Optional) Reproduce Model Development
+### Reproduce Model Development
 
 To reproduce the whole model development process locally using Makefile, run following from command line in the main project repository:
 
 ```bash
-export SQLALCHEMY_DATABASE_URI='sqlite:///data/user.db'
+cd path_to_repo
 make all
+```
+
+If want to run steps separately, you can run following lines under main project repository:
+
+1. load_data
+
+```bash
+make load_data
+or
+python src/load_data.py --config config/config.yml --savecsv data/survey.csv
+
+```
+
+2. generate_features
+
+```bash
+make features
+or
+python src/generate_features.py --config config/config.yml --loadcsv data/survey.csv --savecsv data/survey_cleaned.csv
+
+```
+3. train_model
+
+```bash
+make trained-model
+or
+python src/train_model.py --config config/config.yml --loadcsv data/survey_cleaned.csv --savemodel models/sample/random_forest.pkl
+
+```
+
+4. evaluate_model
+
+```bash
+make evaluate-model
+or
+python src/evaluate_model.py --config config/config.yml --loadmodel models/sample/random_forest.pkl
 ```
 
 ### 2. Configure Flask app 
 
-`config.py` holds the configurations for the Flask app. It includes the following configurations:
+`config/config.py` holds the configurations for the Flask app. It includes the following configurations:
 
 ```python
 DEBUG = True  # Keep True for debugging, change to False when moving to production 
@@ -138,30 +174,48 @@ PORT = 3000  # What port to expose app on
 HOST = "0.0.0.0" # Host IP for the app 
 ```
 
-
-### 3. Initialize the database 
-
-To create a database in the local location configured in `config.py`, run: 
-
-Note: an empty folder named database under <path_to_main_repository>/data has to be created to save the db. For creating a database on RDS, please refer to README.md in src/ folder.
+### 3. Upload data to S3 bucket
+To upload data to a specfic S3 bucket, please make sure you have aws credentials configured. This can be checked by running 
+```bash
+vi ~/.aws/credentials
+```
+If have credentials set up, then run in the terminal
 
 ```bash
-cd path_to_repo/src
-python database.py
+
+python src/upload_data.py --input_file_path FILE_PATH --bucket_name S3_BUCKET_NAME --output_file_path S3_OUTPUT_FILE_PATH
+
+```
+### 3. Initialize the database 
+
+To create a database locally, run: 
+
+Note: an empty folder named database under <path_to_main_repository>/data has to be created to save the db. For creating a database on RDS, please refer to docs/database.md.
+
+```bash
+make database
+
+or 
+
+python src/database.py
 ```
 
 
 ### 4. Run the application 
 To set up environment variable SQLALCHEMY_DATABASE_URI (URL for database that contains bank customers) from command line in the main project repository:
  ```bash
- cd path_to_repo
- Run locally: export SQLALCHEMY_DATABASE_URI='sqlite:///data/database/churn_prediction.db'
+ 
+ Run locally: export SQLALCHEMY_DATABASE_URI='sqlite:///data/user_predictions.db'
  Run on RDS: export SQLALCHEMY_DATABASE_URI="{conn_type}://{user}:{password}@{host}:{port}/{DATABASE_NAME}"
  ```
 
 then
  ```bash
- python app.py
+make app
+
+or
+
+python app.py
  ```
 
 :bulb: Tip:
@@ -170,7 +224,7 @@ When encountering the following error:
     OSError: [Errno 8] Exec format error
 Please add the following line at the very beginning of `app.py`:
 ```
-#!/usr/bin/env python
+#!/usr/bin/env python3
 ```
 
 ### 5. Interact with the application

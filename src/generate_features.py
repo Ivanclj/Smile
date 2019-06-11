@@ -4,8 +4,18 @@ import argparse
 import yaml
 import warnings
 warnings.filterwarnings("ignore")
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger(__name__)
+
 
 def clean_gender(my_df):
+    '''
+    clean up gender in the table
+    :param my_df: the table that has all covariates
+    :return: cleaned table
+    '''
     # Made gender groups
     male_str = ["male", "m", "male-ish", "maile", "mal", "male (cis)", "make", "male ", "man", "msle", "mail", "malr",
                 "cis man", "Cis Male", "cis male"]
@@ -37,6 +47,13 @@ def pdtable(key,df):
     return df.groupby(key).size().sort_values(ascending=False)
 
 def clean_data(my_df):
+    '''
+
+    :param my_df: the table contains all covariates
+    :return:
+    '''
+
+    logging.info("generate features begin")
     my_df.treatment.loc[my_df.treatment == "Yes"] = 1
     my_df.treatment.loc[my_df.treatment == "No"] = 0
 
@@ -177,6 +194,8 @@ def clean_data(my_df):
     my_df = my_df.apply(pd.to_numeric)
     my_df.index = np.arange(0, my_df.shape[0])
 
+    logging.info("generate features done")
+
     return my_df
 
 def choose_features(args):
@@ -189,7 +208,11 @@ def choose_features(args):
         config = yaml.load(f)
 
     config = config['generate_features']
-    df = pd.read_csv(config['read_path'])
+    if args.loadcsv is not None:
+        df = pd.read_csv(args.loadcsv)
+    else:
+        df = pd.read_csv(config['read_path'])
+
     df = clean_data(df)
 
     df = df[config['choose_features']['features_to_use']]
@@ -199,6 +222,8 @@ def choose_features(args):
     else:
         df.to_csv(config['save_features'])
 
+    logging.info("cleaned data saved")
+
 
 
 
@@ -206,6 +231,7 @@ def choose_features(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', default= 'config/config.yml',help='path to yaml file with configurations')
+    parser.add_argument('--loadcsv', help='Path to where the raw data is stored (optional)')
     parser.add_argument('--savecsv', help='Path to where the dataset should be saved to (optional)')
 
     args = parser.parse_args()

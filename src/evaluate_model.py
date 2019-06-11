@@ -42,23 +42,38 @@ from sklearn.naive_bayes import GaussianNB
 #XGBoost
 import xgboost as xgb
 import pickle
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger(__name__)
+
 
 
 
 def evalClassModel(X,y,model, y_test, y_pred_class, plot=False):
+    '''
+    evaluate machine learning model
+    :param X: table has all covariates
+    :param y: the response variable
+    :param model: the machine learning model
+    :param y_test: test set of response
+    :param y_pred_class: the predicted result for test set
+    :param plot: whether to plot
+    :return: accuracy
+    '''
     # Classification accuracy: percentage of correct predictions
     # calculate accuracy
-    print('Accuracy:', metrics.accuracy_score(y_test, y_pred_class))
+    logging.info('Accuracy:' + str(metrics.accuracy_score(y_test, y_pred_class)))
 
     # Null accuracy: accuracy that could be achieved by always predicting the most frequent class
     # examine the class distribution of the testing set (using a Pandas Series method)
-    print('Null accuracy:\n', y_test.value_counts())
+    logging.info('Null accuracy:\n'+ str( y_test.value_counts()))
 
     # calculate the percentage of ones
-    print('Percentage of ones:', y_test.mean())
+    logging.info('Percentage of ones:'+ str(y_test.mean()))
 
     # calculate the percentage of zeros
-    print('Percentage of zeros:', 1 - y_test.mean())
+    logging.info('Percentage of zeros:'+ str(1 - y_test.mean()))
 
     # Comparing the true and predicted response values
     # print('True:', y_test.values[0:25])
@@ -90,25 +105,25 @@ def evalClassModel(X,y,model, y_test, y_pred_class, plot=False):
     # Metrics computed from a confusion matrix
     # Classification Accuracy: Overall, how often is the classifier correct?
     accuracy = metrics.accuracy_score(y_test, y_pred_class)
-    print('Classification Accuracy:', accuracy)
+    logging.info('Classification Accuracy:'+ str(accuracy))
 
     # Classification Error: Overall, how often is the classifier incorrect?
-    print('Classification Error:', 1 - metrics.accuracy_score(y_test, y_pred_class))
+    logging.info('Classification Error:'+ str(1 - metrics.accuracy_score(y_test, y_pred_class)))
 
     # False Positive Rate: When the actual value is negative, how often is the prediction incorrect?
     false_positive_rate = FP / float(TN + FP)
-    print('False Positive Rate:', false_positive_rate)
+    logging.info('False Positive Rate:'+ str(false_positive_rate))
 
     # Precision: When a positive value is predicted, how often is the prediction correct?
-    print('Precision:', metrics.precision_score(y_test, y_pred_class))
+    logging.info('Precision:'+ str(metrics.precision_score(y_test, y_pred_class)))
 
     # IMPORTANT: first argument is true values, second argument is predicted probabilities
-    print('AUC Score:', metrics.roc_auc_score(y_test, y_pred_class))
+    logging.info('AUC Score:'+ str(metrics.roc_auc_score(y_test, y_pred_class)))
 
     # calculate cross-validated AUC
-    print('Cross-validated AUC:', cross_val_score(model, X, y, cv=10, scoring='roc_auc').mean())
-    print('Cross-validated Accuracy:', cross_val_score(model, X, y, cv=10, scoring='accuracy').mean())
-    print('Cross-validated F1:', cross_val_score(model, X, y, cv=10, scoring='f1').mean())
+    logging.info('Cross-validated AUC:'+ str(cross_val_score(model, X, y, cv=10, scoring='roc_auc').mean()))
+    logging.info('Cross-validated Accuracy:'+ str(cross_val_score(model, X, y, cv=10, scoring='accuracy').mean()))
+    logging.info('Cross-validated F1:'+ str(cross_val_score(model, X, y, cv=10, scoring='f1').mean()))
 
     ##########################################
     # Adjusting the classification threshold
@@ -217,11 +232,14 @@ def evaluate(args):
 
     accuracy_score = evalClassModel(X,y,forest, y_test, y_pred_class, True)
 
+    logging.info("evaluation done")
+
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', default= 'config/config.yml',help='path to yaml file with configurations')
+    parser.add_argument('--loadmodel', help='Path to where the model is saved to (optional)')
 
     args = parser.parse_args()
 

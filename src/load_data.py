@@ -12,11 +12,13 @@ import argparse
 import yaml
 import pandas as pd
 
+logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
 
 def download_data(read_path):
     df = pd.read_csv(read_path,index_col=0)
+    logging.info('data is downloaded')
     return df
 
 def run_loading(args):
@@ -36,6 +38,7 @@ def run_loading(args):
         df.to_csv(args.savecsv)
     else:
         df.to_csv(config["download_data"]['save_path'])
+    logging.info('data is saved')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
@@ -45,3 +48,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     run_loading(args)
+    logging.info('load_data completed')
